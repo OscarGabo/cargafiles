@@ -1,0 +1,48 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{{titulo}}</title>
+</head>
+<body>
+	<h1>Cargafiles</h1>
+
+<!--	<table>
+        {% for f in file %}
+        <tr>
+        	<td > {{ f }} </td>
+        </tr>
+        {% endfor %}                                       
+    </table>  
+
+     
+
+    <p>{{ ruta }}</p>
+    <p>{{ rutaescenario }}</p>
+    <p>{{ escenario }}</p>
+    <p>{{ segundo }}</p>	-->
+
+    <h3>Total de Archivos: {{archivostotal}}</h3>
+    <p>Rutas recibidas: {{ total_ruta_unica }}</p>
+    <p>Rutas duplicadas: {{ ruta_duplicada }}</p>
+    <p>Recargas: {{ recargas }}</p>
+
+
+    <p>fecha hoy: {{ ahora }}</p>
+    <p>Ayer: {{ ayer }}</p>
+    <br>
+    <br>
+
+    <table>
+        {% for f in ruta_unica %}
+        <tr>
+            <td > {{ f }} </td>
+        </tr>
+        {% endfor %}                                       
+    </table>  
+
+
+</body>
+</html>
