@@ -1,4 +1,22 @@
-<h1>Hola mundo!</h1>
+{% extends "cargafiles/base.html" %}
 
 
-{{ response.total }}
+{% block content %}
+
+
+
+
+{% for x in ruta %}
+    <li>{{ x }}</li>
+{% endfor %}
+
+
+
+
+
+{% for datos in nombre  %}
+    <li>{{ datos }}</li>
+{% endfor %}
+
+
+{% endblock %}

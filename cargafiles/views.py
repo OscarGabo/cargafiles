@@ -7,7 +7,6 @@ from datetime import datetime, date, time, timedelta
 import calendar
 from ftplib import FTP
 import requests
-import json
 
 
 def index(request):
@@ -136,12 +135,7 @@ def index(request):
                       'RCH417', 'RCH418', 'RCH419', 'RCH501', 'RCH502', 'RCH503', 'RCH504',
                       'RCH505', 'RCH506', 'RCH507', 'RCH508', 'RCH509', 'RCH510', 'RCH511',
                       'RCH512', 'RCH513', 'RCH514', 'RCH515', 'RCH516', 'RCH517', 'RCH518']
-        }, {  # {
-            # "nomen": "rei",
-            # "nombre": "Iztacalco",
-            # "rutas": ['REIR01','REIR02','REIR03','REIR04','REIR05','REIR06','REIR07','REIR08','REIR09','REIR10','REIR11','REIR12','REIR13','REIR14','REIR15','REIR16','REIR17','REIR18','REIR19','REIR20','REIR21','REIR22','REIR23','REIR24','REIR25','REIR26']
-            # },
-
+        }, {
             "nomen": "rmi",
             "nombre": "Mixcoac",
             "rutas": ['RMI101', 'RMI102', 'RMI103', 'RMI104', 'RMI105', 'RMI106', 'RMI107',
@@ -209,6 +203,69 @@ def index(request):
                       'RZAZ57', 'RZAZ58', 'RZAZ59', 'RZAZ60', 'RZAZ61', 'RZAZ62', 'RZAZ63',
                       'RZAZ64', 'RZAZ65', 'RZAZ66', 'RZAZ67', 'RZAZ68', 'RZAZ69', 'RZAZ70',
                       'RZAZ71', 'RZAZ72', 'RZAZ73', 'RZAZ74']
+        }, {
+            "nomen": "rcc",
+            "nombre": "Coacalco",
+            "rutas":  ['RCC100', 'RCC101', 'RCC102', 'RCC103', 'RCC104', 'RCC105', 'RCC106',
+                       'RCC107', 'RCC108', 'RCC109', 'RCC110', 'RCC111', 'RCC112', 'RCC113',
+                       'RCC114', 'RCC115', 'RCC116', 'RCC117', 'RCC200', 'RCC201', 'RCC202',
+                       'RCC203', 'RCC204', 'RCC205', 'RCC206', 'RCC207', 'RCC208', 'RCC209',
+                       'RCC210', 'RCC211', 'RCC212', 'RCC213', 'RCC214', 'RCC215', 'RCC216',
+                       'RCC217', 'RCC300', 'RCC301', 'RCC302', 'RCC303', 'RCC304', 'RCC305',
+                       'RCC306', 'RCC307', 'RCC308', 'RCC309', 'RCC310', 'RCC311', 'RCC312',
+                       'RCC313', 'RCC314', 'RCC315', 'RCC316', 'RCC400', 'RCC401', 'RCC402',
+                       'RCC403', 'RCC404', 'RCC405', 'RCC406', 'RCC407', 'RCC408', 'RCC409',
+                       'RCC410', 'RCC411', 'RCC412', 'RCC413', 'RCC414', 'RCC415', 'RCC416',
+                       'RCC417', 'RCC500', 'RCC501', 'RCC502', 'RCC503', 'RCC504', 'RCC505',
+                       'RCC506', 'RCC507', 'RCC508', 'RCC509', 'RCC510', 'RCC511', 'RCC512',
+                       'RCC513', 'RCC514', 'RCC515', 'RCC516', 'RCC517', 'RCC600', 'RCC601',
+                       'RCC602', 'RCC603', 'RCC604', 'RCC605', 'RCC606', 'RCC607', 'RCC608',
+                       'RCC609', 'RCC610', 'RCC611', 'RCC612', 'RCC613', 'RCC614', 'RCC615',
+                       'RCC616', 'RCC617', 'RCC618', 'RCC619']
+        }, {
+            "nomen": "rcd",
+            "nombre": "Cuautitlan",
+            "rutas":  ['RCD701', 'RCD702', 'RCD703', 'RCD704', 'RCD705', 'RCD706', 'RCD707',
+                       'RCD708', 'RCD709', 'RCD710', 'RCD711', 'RCD712', 'RCD713', 'RCD714',
+                       'RCD715', 'RCD716', 'RCD717', 'RCD718', 'RCD719', 'RCD720', 'RCD721',
+                       'RCD722', 'RCD723', 'RCD724', 'RCD725', 'RCD726', 'RCD727', 'RCD728',
+                       'RCD729', 'RCD730', 'RCD731', 'RCD732', 'RCD733', 'RCD734', 'RCD735',
+                       'RCD736', 'RCD737', 'RCD738', 'RCD739', 'RCD740', 'RCD741', 'RCD742',
+                       'RCD743', 'RCD744', 'RCD745', 'RCD746', 'RCD747', 'RCD748', 'RCD749',
+                       'RCD750', 'RCD751', 'RCD752', 'RCD753', 'RCD754', 'RCD755', 'RCD756',
+                       'RCD757', 'RCD758', 'RCD759', 'RCD760', 'RCD761', 'RCD762', 'RCD763',
+                       'RCD764', 'RCD765', 'RCD766', 'RCD767', 'RCD768', 'RCD769', 'RCD771',
+                       'RCD772']
+        },  {
+            "nomen": "rpf",
+            "nombre": "Pacifico",
+            "rutas": {'PF0051', 'PF0052', 'RPF001', 'RPF002', 'RPF003', 'RPF004', 'RPF005',
+                      'RPF006', 'RPF007', 'RPF008', 'RPF009', 'RPF010', 'RPF011', 'RPF012',
+                      'RPF013', 'RPF014', 'RPF015', 'RPF016', 'RPF017', 'RPF018', 'RPF020',
+                      'RPF021', 'RPF022', 'RPF023', 'RPF024', 'RPF026', 'RPF027', 'RPF028',
+                      'RPF029', 'RPF031', 'RPF032', 'RPF033', 'RPF034', 'RPF035', 'RPF036',
+                      'RPF037', 'RPF038', 'RPF039', 'RPF041', 'RPF042', 'RPF043', 'RPF044',
+                      'RPF101', 'RPF102', 'RPF139', 'RPF141', 'RPF387', 'RPFT01'}
+        },  {
+            "nomen": "rte",
+            "nombre": "Texcoco",
+            "rutas": ['RTE100', 'RTE101', 'RTE102', 'RTE103', 'RTE104', 'RTE105', 'RTE106',
+                      'RTE107', 'RTE108', 'RTE109', 'RTE110', 'RTE111', 'RTE112', 'RTE113',
+                      'RTE114', 'RTE200', 'RTE201', 'RTE202', 'RTE203', 'RTE204', 'RTE205',
+                      'RTE206', 'RTE207', 'RTE208', 'RTE209', 'RTE210', 'RTE211', 'RTE212',
+                      'RTE213', 'RTE214', 'RTE300', 'RTE301', 'RTE302', 'RTE303', 'RTE304',
+                      'RTE305', 'RTE306', 'RTE307', 'RTE308', 'RTE309', 'RTE310', 'RTE311',
+                      'RTE312', 'RTE313', 'RTE314', 'RTE315', 'RTE400', 'RTE401']
+        },  {
+            "nomen": "rtl",
+            "nombre": "Tlalnepantla",
+            "rutas": ['RTL231', 'RTL232', 'RTL233', 'RTL234', 'RTL235', 'RTL236', 'RTL237',
+                      'RTL238', 'RTL239', 'RTL240', 'RTL241', 'RTL242', 'RTL243', 'RTL244',
+                      'RTL245', 'RTL246', 'RTL247', 'RTL248', 'RTL249', 'RTL250', 'RTL251',
+                      'RTL252', 'RTL253', 'RTL254', 'RTL255', 'RTL256', 'RTL257', 'RTL258',
+                      'RTL259', 'RTL260', 'RTL261', 'RTL262', 'RTL263', 'RTL264', 'RTL265',
+                      'RTL266', 'RTL267', 'RTL268', 'RTL269', 'RTL270', 'RTL271', 'RTL272',
+                      'RTL273', 'RTL274', 'RTL275', 'RTL276', 'RTL277', 'RTL278']
         }
     ]
 
@@ -348,6 +405,7 @@ def index(request):
             "total_duplicada": total_ruta_duplicada,
             'porcentaje': porcentaje,
             'nombre': unidad_operativa["nombre"],
+            'nomen': unidad_operativa["nomen"],
             'notifico': notifico,
         }
 
@@ -382,29 +440,52 @@ def wsns(request):
     template = loader.get_template('cargafiles/wsns.html')
     titulo = 'WebServices neosoft'
 
+
+    ruta = []
+    rutaescenario = []
+    escenario = []
+    fechayhora = []
+    anio = []
+    mes = []
+    dia = []
+    hora = []
+    minuto = []
+    nombre = []
+
+
     r = requests.post('http://controlcenterm2m.com/fleetapi/center/cargafiles', data={
         'api_login': '0366d1cb254ae139',
         'api_key': '2362c286ad0acae8cc253260548cb9fa',
-        'from_date': '2017-02-15',
-        'to_date': '2017-02-15',
+        'from_date': '2017-05-15',
+        'to_date': '2017-05-15',
     })
-
-    #	data = json.loads(r.text)
-
     response = r.json()
 
-    #	if response['status'] == True:
-    #		for page in response['data']:
-    #			for route in page:
-    #				route['cdtime']
-    #				pass
-    #			pass
+    if response['status'] == True:
+        for page in response['data']:
+            nombre.append(page['nam'])
+            pass
+        # extraer datos
+        y = 0
+        for x in nombre:
+            ruta.insert(y, x[0:6])
+            rutaescenario.insert(y, x[0:12])
+            escenario.insert(y, x[11:12])
+            fechayhora.insert(y, x[13:28])
+            anio.insert(y, x[13:17])
+            mes.insert(y, x[17:19])
+            dia.insert(y, x[19:21])
+            hora.insert(y, x[22:24])
+            minuto.insert(y, x[24:26])
 
-
+            y += 1
+            pass
 
     context = {
         'titulo': titulo,
         'response': response,
+        'nombre': nombre,
+        'ruta': ruta,
     }
 
     return HttpResponse(template.render(context, request))
